@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         AtCoder Problems Marker
 // @namespace    iilj
-// @version      2020.1.27.1
+// @version      2020.1.28.1
 // @description  AtCoder Problems 上に表示される問題にユーザが独自のマーカー（解説ACなど）を付けられるようにします
 // @author       iilj
-// @supportURL   https://github.com/iilj/AtCoderProblemsMarker/issues
+// @supportURL   https://github.com/iilj/AtCoderProblemsExt/issues
 // @match        https://kenkoooo.com/atcoder/*
 // @require      https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js

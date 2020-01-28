@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AtCoder Problems Penalty Counter
 // @namespace    iilj
-// @version      2020.01.28.1
+// @version      2020.01.28.2
 // @description  AtCoder Problems のテーブルページ上で問題ごとにコンテスト中のペナルティ数を表示します
 // @author       iilj
 // @supportURL   https://github.com/iilj/AtCoderProblemsExt/issues
@@ -114,6 +114,9 @@ span.appc-penalty {
             if (tableObserver) {
                 tableObserver.disconnect();
             }
+            document.querySelectorAll('span.appc-penalty').forEach(spanPenalty => {
+                spanPenalty.innerText = '';
+            });
             document.querySelectorAll('td.table-problem').forEach(td => {
                 const lnk = td.querySelector('a[href]');
                 if (lnk && lnk.href in userPenaltyMap && userPenaltyMap[lnk.href] > 0) {

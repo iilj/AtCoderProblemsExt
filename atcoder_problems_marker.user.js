@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AtCoder Problems Marker
 // @namespace    iilj
-// @version      2020.1.28.1
+// @version      2020.6.26.1
 // @description  AtCoder Problems 上に表示される問題にユーザが独自のマーカー（解説ACなど）を付けられるようにします
 // @author       iilj
 // @supportURL   https://github.com/iilj/AtCoderProblemsExt/issues
@@ -21,8 +21,8 @@
 
     GM_addStyle(GM_getResourceText('css_contextmenu'));
     GM_addStyle(`
-td.apm-ac-after-reading-answer {
-    background-color: #ffff88;
+td.table-problem.apm-ac-after-reading-answer {
+    background-color: #ffff88 !important;
 }
     `);
 
@@ -38,7 +38,7 @@ td.apm-ac-after-reading-answer {
     let json;
     /**
      * hashset to store whether the problem is marked as ac-after-reading-answer or not
-     * @type {Object}
+     * @type {{[key:string]: number}}
      */
     let hash;
     /**
